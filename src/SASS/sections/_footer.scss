@@ -1,0 +1,75 @@
+@use "../abstract/variables" as *;
+
+footer {
+  background-color: $primary-color-1;
+  height: auto;
+  padding: 4rem 15rem 4rem 4rem;
+
+  .#{&}__logo {
+    margin-bottom: 1rem;
+  }
+
+  .#{&}__text {
+    color: $neutral-color-1;
+    font-size: 1.05rem;
+
+    .contact {
+      .phone__icon,
+      .mail__icon {
+        margin-bottom: -2px;
+      }
+
+      .phone__info {
+        display: inline-block;
+        padding: 0 0 1rem 1.2rem;
+      }
+
+      .mail__info {
+        display: inline-block;
+        padding-left: 1.2rem;
+      }
+    }
+
+    li {
+      list-style-type: none;
+
+      &:hover {
+        cursor: pointer;
+        color: $btn-hover;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 1em;
+      }
+    }
+
+    .social-icons {
+      width: 7rem;
+
+      .icon {
+        display: inline-block;
+        background-color: $neutral-color-1;
+        mask-size: cover;
+        height: 27px;
+        width: 27px;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $btn-hover;
+        }
+      }
+
+      .icon--fb {
+        mask: url(../../images/logo-facebook.svg);
+      }
+
+      .icon--twitter {
+        mask: url(../../images/logo-twitter.svg);
+      }
+
+      .icon--instagram {
+        mask: url(../../images/logo-instagram.svg);
+      }
+    }
+  }
+}

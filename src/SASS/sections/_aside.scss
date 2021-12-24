@@ -1,0 +1,89 @@
+@use "../abstract/variables" as *;
+
+$a: ".aside";
+
+svg {
+  display: block;
+  margin-top: -5rem;
+}
+
+#{$a} {
+  height: auto;
+  padding: 0 4.5rem 6rem 4rem;
+  margin-top: -2.25rem;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    z-index: -1;
+    top: 2.25rem;
+    left: 0;
+    width: 100%;
+    height: 94%;
+    background-color: $primary-color-3;
+  }
+
+  &__text {
+    margin-top: -28px;
+
+    #{$a}__title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $primary-color-1;
+      padding-bottom: 0.8em;
+    }
+
+    #{$a}__info {
+      font-size: 1.05rem;
+      color: $primary-color-1;
+      padding: 0 8rem 1em 0;
+    }
+
+    #{$a}__link {
+      display: inline-block;
+      padding-bottom: 0.4rem;
+      margin-bottom: 2rem;
+      position: relative;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        z-index: 1;
+        top: 85%;
+        left: 0;
+        width: 98%;
+        height: 1px;
+        background-color: $accent-color-2;
+      }
+
+      &:hover {
+        .link__text {
+          color: $link-hover;
+        }
+
+        &::after {
+          background-color: $link-hover;
+        }
+      }
+
+      .link__text {
+        display: inline-block;
+        font-size: 1.05rem;
+        color: $accent-color-2;
+      }
+
+      .link__img {
+        margin-left: 0.4rem;
+        margin-bottom: -0.2rem;
+      }
+    }
+  }
+
+  &__img {
+    width: 45%;
+  }
+}

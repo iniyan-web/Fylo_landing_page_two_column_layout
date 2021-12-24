@@ -1,0 +1,27 @@
+@use "../abstract/variables" as *;
+
+.input {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: $primary-color-1;
+  padding: 1rem;
+  outline: none;
+  border-radius: 3px;
+
+  &::placeholder {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+  }
+
+  &--hero {
+    height: 2.4rem;
+    width: 60%;
+  }
+
+  &--sign-up {
+    height: 2.8rem;
+    width: 29rem;
+    margin-bottom: 0.75rem;
+  }
+}

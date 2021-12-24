@@ -1,0 +1,49 @@
+@use "../abstract/variables" as *;
+
+$c: ".card";
+$u: ".user";
+
+.testimonial-card {
+  width: 23.5rem;
+  height: auto;
+  background: url(../../images/icon-quotes.svg) top 12% left 9.5% no-repeat
+    $primary-color-4;
+  background-size: 1rem;
+  padding: 3rem 2rem 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 5px $card-shadow;
+
+  p {
+    color: $primary-color-1;
+  }
+
+  #{$c}__info {
+    font-size: 0.95rem;
+    line-height: 1.5em;
+    padding-bottom: 1em;
+  }
+
+  #{$c}__user {
+    display: inline-block;
+
+    #{$u}__img {
+      width: 2rem;
+      border-radius: 100%;
+      margin-bottom: -2px;
+    }
+
+    #{$u}__details {
+      display: inline-block;
+      margin-left: 0.5rem;
+
+      #{$u}__name {
+        font-size: 0.9rem;
+        font-weight: 700;
+      }
+
+      #{$u}__designation {
+        font-size: 0.6rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@use "../abstract/mixins" as *;
+
+header,
+.nav,
+.hero__content,
+.hero__form,
+.social-icons {
+  @include flexbox(center, space-between);
+}
+
+.aside,
+.sign-up,
+.footer__text {
+  @include flexbox(flex-start, space-between);
+}

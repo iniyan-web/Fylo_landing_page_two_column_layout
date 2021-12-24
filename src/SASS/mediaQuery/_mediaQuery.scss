@@ -1,0 +1,420 @@
+@use "../abstract/mixins" as *;
+$h: ".hero";
+$a: ".aside";
+$s: ".sign-up";
+
+@media screen and (max-width: 1250px) {
+  #{$h} {
+    &__text {
+      margin-top: -1rem;
+
+      #{$h}__title {
+        line-height: 1.2em;
+      }
+
+      #{$h}__info {
+        padding-right: 1em;
+      }
+
+      #{$h}__form {
+        width: auto;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+
+        .input--hero {
+          width: 60%;
+          margin-bottom: 1rem;
+        }
+
+        .btn--hero {
+          width: 60%;
+        }
+
+        #{$h}__error {
+          top: 2.35rem;
+        }
+      }
+    }
+
+    &__img {
+      width: 50%;
+    }
+  }
+
+  .aside {
+    padding-right: 4rem;
+
+    &__text {
+      .aside__info {
+        padding-right: 5rem;
+      }
+    }
+
+    &__img {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 1133px) {
+  #{$s} {
+    padding-right: 4rem;
+
+    &__text {
+      padding-right: 10%;
+    }
+  }
+}
+
+@media screen and (max-width: 1028px) {
+  #{$s}__text {
+    padding-right: 5%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .aside__text {
+    .aside__info {
+      padding-right: 2rem;
+    }
+  }
+
+  #{$s} {
+    .input--sign-up {
+      width: 25rem;
+    }
+  }
+
+  footer {
+    padding-right: 4rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  #{$h} {
+    &__content {
+      flex-flow: column-reverse nowrap;
+
+      #{$h}__text {
+        text-align: center;
+        margin-top: 0;
+
+        #{$h}__title {
+          font-size: 2.5rem;
+          margin-bottom: 0.6em;
+        }
+
+        #{$h}__info {
+          padding-right: 2%;
+          padding-left: 2%;
+        }
+
+        #{$h}__form {
+          width: 25rem;
+          margin: 0 auto;
+
+          .input--hero,
+          .btn--hero {
+            width: 100%;
+          }
+        }
+      }
+
+      #{$h}__img {
+        width: 60%;
+        margin-bottom: 5.5rem;
+      }
+    }
+  }
+
+  #{$a} {
+    flex-flow: column-reverse nowrap;
+    align-items: center;
+
+    &::after {
+      height: 97%;
+    }
+
+    &__text {
+      margin-top: 0;
+
+      #{$a}__title {
+        text-align: center;
+      }
+
+      #{$a}__info {
+        padding: 0 2% 1em;
+      }
+
+      #{$a}__link {
+        left: 40%;
+        margin-top: 0.5em;
+      }
+    }
+
+    &__img {
+      width: 60%;
+      margin-bottom: 6rem;
+    }
+  }
+
+  .testimonial-card {
+    margin: 0 auto;
+  }
+
+  #{$s} {
+    flex-flow: column nowrap;
+    text-align: center;
+    padding-top: 4rem;
+
+    &__form {
+      @include flexbox(center, space-between);
+      flex-flow: column nowrap;
+      align-self: center;
+      width: 25rem;
+
+      .btn--sign-up {
+        width: 100%;
+      }
+    }
+
+    &__text {
+      padding: 0 0 1.5rem;
+    }
+  }
+
+  footer {
+    padding-bottom: 2rem;
+
+    .#{&}__logo {
+      margin-bottom: 1.8rem;
+    }
+
+    .#{&}__text {
+      flex-flow: column nowrap;
+
+      .contact,
+      li:last-child {
+        margin-bottom: 3em;
+      }
+
+      .social-icons {
+        align-self: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #{$h}__title {
+    margin-bottom: 0.6em;
+  }
+
+  #{$a}__text {
+    #{$a}__title {
+      font-size: 2rem;
+    }
+
+    #{$a}__link {
+      left: 36%;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  html {
+    font-size: 15px;
+  }
+
+  header {
+    .nav {
+      width: 13.5rem;
+    }
+  }
+
+  #{$h}__content {
+    #{$h}__text {
+      #{$h}__info {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+
+    #{$h}__img {
+      width: 20rem;
+    }
+  }
+
+  #{$a}__text {
+    #{$a}__info {
+      padding: 0 0 1em;
+    }
+
+    #{$a}__link {
+      left: 34%;
+    }
+  }
+
+  #{$a}__img {
+    width: 20rem;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  html {
+    font-size: 14.5px;
+  }
+
+  #{$h},
+  #{$a},
+  #{$s},
+  footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  #{$h} {
+    &__content {
+      #{$h}__text {
+        #{$h}__title {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  #{$a} {
+    #{$a}__text {
+      #{$a}__title {
+        font-size: 1.5rem;
+      }
+
+      #{$a}__link {
+        left: 32%;
+      }
+    }
+  }
+
+  #{$s} {
+    &__text {
+      #{$s}__title {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #{$h},
+  #{$a},
+  #{$s},
+  footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  header {
+    .#{&}__logo {
+      width: 7rem;
+    }
+
+    .nav {
+      width: 12.5rem;
+    }
+  }
+
+  #{$h}__content {
+    #{$h}__img {
+      margin-bottom: 3rem;
+    }
+
+    #{$h}__form {
+      .input--hero,
+      .btn--hero {
+        height: 2.8rem;
+        font-size: 1rem;
+      }
+
+      #{$h}__error {
+        top: 2.8rem;
+      }
+    }
+  }
+
+  #{$a} {
+    &__img {
+      margin-top: 3rem;
+    }
+  }
+
+  #{$s} {
+    &__form {
+      .input--sign-up,
+      .btn--sign-up {
+        height: 3rem;
+        font-size: 1rem;
+      }
+    }
+
+    &__error {
+      font-size: 0.85rem;
+    }
+  }
+
+  .footer__logo {
+    width: 10rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 13px;
+  }
+
+  #{$h}__content {
+    #{$h}__text {
+      #{$h}__form {
+        width: 22rem;
+
+        .input--hero,
+        .btn--hero {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  #{$a} {
+    #{$a}__text {
+      #{$a}__link {
+        left: 28%;
+      }
+    }
+  }
+
+  #{$s} {
+    &__form {
+      width: 22rem;
+
+      .input--sign-up {
+        width: 100%;
+      }
+    }
+  }
+
+  footer {
+    .#{&}__text {
+      .social-icons {
+        width: 9rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  header {
+    .nav {
+      width: 12rem;
+    }
+  }
+}

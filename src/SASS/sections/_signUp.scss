@@ -1,0 +1,31 @@
+@use "../abstract/variables" as *;
+
+$s: ".sign-up";
+
+#{$s} {
+  background-color: $primary-color-2;
+  height: auto;
+  padding: 5.5rem 6.5rem 4rem 4rem;
+
+  &__text {
+    color: $neutral-color-1;
+    padding-right: 16%;
+    margin-top: -7px;
+
+    #{$s}__title {
+      font-size: 2rem;
+      font-weight: 700;
+      padding-bottom: 0.5em;
+    }
+
+    #{$s}__info {
+      font-size: 1.05rem;
+    }
+  }
+
+  &__error {
+    font-size: 0.75rem;
+    color: $neutral-color-2;
+    margin: -0.7rem 0 1em;
+  }
+}

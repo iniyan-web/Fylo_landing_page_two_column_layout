@@ -1,0 +1,42 @@
+@use "../abstract/variables" as *;
+
+$h: ".hero";
+
+#{$h} {
+  padding: 3rem 4rem 7.5rem;
+
+  &__text {
+    margin-top: -2.7rem;
+
+    #{$h}__title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $primary-color-1;
+      line-height: 1.4em;
+      margin-bottom: 0.4em;
+    }
+
+    #{$h}__info {
+      font-size: 1.05rem;
+      color: $primary-color-1;
+      padding: 0 4.5em 1.4em 0;
+    }
+
+    #{$h}__form {
+      width: 31rem;
+      position: relative;
+
+      #{$h}__error {
+        font-size: 0.75rem;
+        color: $error-color;
+        position: absolute;
+        top: 2.7rem;
+        left: 0;
+      }
+    }
+  }
+
+  &__img {
+    width: 48%;
+  }
+}
